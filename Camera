@@ -1,0 +1,31 @@
+public class Camera{
+	private double x;
+	private double y;
+	private double vx;
+	private double ax;
+
+	public Camera(double x, double y){
+		this.x=x;
+		this.y=y;
+	}
+
+
+	public int getX(){
+		return x;
+	}
+
+	public int getY(){
+		return Y;
+	}
+
+	public double getVx(){
+		return vx;
+	}
+
+	public void update(double time, double xhero){
+		ax=xhero-x-1.2*vx;
+		vx+=ax*time;
+		x+=vx*time;
+	}	
+
+}
