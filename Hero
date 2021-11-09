@@ -1,0 +1,28 @@
+public class Hero extends AnimatedThing{
+
+	double invincibility;
+
+	public Hero(double x, double y, double length, double width, String fileName){
+		super(x, y, length, width, filename);
+	}
+	
+	public void update(double time){
+		if(attitude==?){
+			ay+=-9.81;
+			vy+=ay*time;
+			y-=vy*time;
+		}
+	}
+		
+	setInvincibility(double time){
+		if(collision){
+			invincibility=25000000000;
+		}
+		while(invincibility>0){
+			if(heroUpdate){
+				invincibility-=time;
+			}
+		break();
+		}
+	}
+}
