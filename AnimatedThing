@@ -1,0 +1,40 @@
+public abstract class AnimatedThing{
+	private double x;
+	private double y;
+	private ImageView sprite;
+	private Integer attitude=0; ??
+	private int index;
+	private double duration;
+	private indexMax;
+	private double length;
+	private double width;
+	private double offset;
+	private double ax;
+	private double vx;
+
+	public AnimatedThing(double x, double y, double length, double width, String fileName){
+		Image spriteSheet = new Image(fileName);
+		sprite = new ImageView(spriteSheet);
+		sprite.setViewport(new Rectangle2D(x,y,length,width));
+	}
+
+	public ImageView getSprite(){
+		return sprite;
+	}
+
+	public void update(){
+	}
+
+	Rectangle2DgetHitBox(){
+		for(List<Foe> foe:foes){
+			if(x.Hero==x.foe && y.Hero==y.foe){
+				setInvincibility();
+			}
+			else{
+				continue;
+			}
+		}
+	}
+}
+	
+	
