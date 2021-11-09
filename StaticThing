@@ -1,0 +1,17 @@
+public class StaticThing{
+
+	private double x;
+	private double y;
+	private ImageView sprite;
+
+	public StaticThing(double x, double y, double length, double width, String fileName){
+		Image spriteSheet = new Image(fileName);
+		sprite.setViewport(new Rectangle2D(x,y,length,width));
+	}
+
+	public ImageView getSprite(){
+		return sprite;
+	}	
+}
+	
+	
