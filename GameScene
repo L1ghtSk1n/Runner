@@ -1,0 +1,32 @@
+public class Gamescene extends Scene{
+
+	Camera camera;
+	private StaticThing right;
+	private Statiching left;
+	private Integer numberOfLives=3; 
+	private Hero hero;
+	private Foe foe;
+	
+	public GameScene(double length, double width){
+		hero = new Hero();
+		foe = new foe();
+	}	
+
+	AnimationTimer timer = new AnimationTimer(){
+		public void handle(long time){
+			hero.update(time);
+			camera.update(time);
+			gameScene.update(time);
+		}
+	}
+	
+	timerStart(){ 
+		timer.start();
+	}
+		
+	public void update(double time, double lengthRectangle){
+		x=(x+camera.getVx()*time)%lengthRectangle;	
+	}
+
+}
+	
